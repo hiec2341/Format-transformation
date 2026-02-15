@@ -11,7 +11,3 @@
 
 ## 🚀 快速使用
 ### 本地运行
-1. 克隆仓库：
-   ```bash
-   git clone https://github.com/你的GitHub用户名/audio-converter.git
-   cd audio-converter
