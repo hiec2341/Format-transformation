@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音频格式转换器 - 纯前端本地处理</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>音频格式转换器</h1>
+            <p>纯前端本地处理 | 支持WAV/FLAC/MP3互转 | 无需后端/FFmpeg</p>
+        </header>
+        <main>
+            <!-- 拖拽上传区域 -->
+            <div class="drop-zone" id="dropZone">
+                <i>🎵</i>
+                <h3>点击或拖拽音频文件到此处</h3>
+                <p>支持 WAV、FLAC、MP3 格式 | 文件不上传任何服务器</p>
+                <input type="file" id="fileInput" accept=".wav,.flac,.mp3" multiple hidden>
+            </div>
+
+            <!-- 格式选择 -->
+            <div class="format-selector">
+                <label for="targetFormat">转换为：</label>
+                <select id="targetFormat">
+                    <option value="wav">WAV</option>
+                    <option value="flac">FLAC</option>
+                    <option value="mp3">MP3</option>
+                </select>
+            </div>
+
+            <!-- 操作按钮 -->
+            <div class="button-group">
+                <button id="convertBtn">开始转换</button>
+            </div>
+
+            <!-- 进度条区域 -->
+            <div class="progress-section" id="progressSection">
+                <h3>转换进度</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="progressText">等待转换...</p>
+            </div>
+
+            <!-- 结果下载区域 -->
+            <div class="result-section" id="resultSection">
+                <h3>转换完成</h3>
+                <div id="resultList"></div>
+            </div>
+        </main>
+        <footer>
+            <p>纯前端音频转换器 | 本地处理，隐私安全</p>
+        </footer>
+    </div>
+
+    <!-- 引入核心脚本（顺序不可换） -->
+    <script src="assets/js/audio-converter.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
